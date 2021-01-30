@@ -1,0 +1,138 @@
+// Media Styles start
+
+@media screen and (max-width: 985px) and (min-width: 780px){
+    .container{
+        width: 748px;
+    }
+    .works_card{
+        width: 236px;
+    }
+    .partner{
+        margin: 0 auto;
+        width: 492px;
+    }
+    .holiday_idea_block{
+        width: 236px;
+        img{
+            margin-left: -30px;
+            width: 300px;
+            height: 310px;
+        }
+    }
+    .long{
+        img{
+            margin-left: -50px;
+            width: 620px;
+        }
+        width: 492px;
+    }
+    h2{
+        font-size: 22px;
+        line-height: 27px;
+    }
+    .partner_card{
+        margin-bottom: 36px;
+    }
+}
+
+@media screen and (max-width: 780px){
+    .container{
+        width: 98%;
+    }
+    .header_wrapper{       
+        @include flexBox(space-between, center, column-reverse);
+    }
+    .logo{
+        padding-top: 97px;
+    }
+    .works_card{
+        width: 100%;
+        height: 80vw;
+        margin-bottom: 10px;
+    }
+    .partner{
+        margin: 0 auto;
+        // width: 300px;
+    }
+    .partner_card{
+        margin-bottom: 16px;
+        width: 100%;
+    }
+    .holiday_idea_block{
+        width: 100%;
+        height: 50vw;
+        img{
+            margin-top: -100px;
+            // width: 100%;
+            // height: 100%;
+        }
+    }
+    .long{
+        img{
+            margin-top: 0px;
+        }
+    }
+    h1{
+        font-size: 30px;
+        line-height: 37px;
+    }
+    .preview_sub_title{
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .preview_btn{
+        width: 270px;
+        margin-bottom: 153px;
+    }
+    .preview_wrapper{
+        width: 280px;
+    }
+    h2{
+        margin: 36px 0px 14px;
+        font-size: 22px;
+        line-height: 27px;
+    }
+    .partner_btn{
+        width: 270px;
+    }
+    .avtibity_form{
+        width: 100%;
+        @include flexBox(flex-start, center, column);
+        margin-bottom: 20px;
+    }
+    input[type=button]{
+        margin-top: 10px;
+        width: 270px;
+    }
+    input[type=text]{
+        width: 270px;
+    }
+    .footer_left{
+        margin: 0 auto;
+        @include flexBox(flex-start, center, column);
+    }
+    .company{
+        margin-top: 13px;
+        width: 100%;
+        text-align: center;
+    }
+    .footer_right{
+        margin: 0 auto;
+        .designed_by{
+            @include flexBox(flex-start, center, column);
+        }
+    }
+    nav ul{
+        width: 100%;
+        @include flexBox(center);
+        li{
+            margin: 5px;
+        }
+    }
+    .footer{
+        padding: 20px 0px 20px;
+    }
+}
+
+
+// Media Styles end

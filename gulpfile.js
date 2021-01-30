@@ -44,6 +44,11 @@ const images = () => {
         .pipe(gulp.dest('build/images'))
 }
 
+const fonts = () => {
+    return gulp.src('src/fonts/*.*')
+        .pipe(gulp.dest('build/fonts'))
+}
+
 const server = () => {
     browserSync.init({
         server: {
@@ -63,10 +68,11 @@ const watch = () => {
     gulp.watch('src/styles/*.scss', styles);
     gulp.watch('src/scripts/*.js', scripts);
     gulp.watch('src/images/*.*', images);
+    gulp.watch('src/fonts/*.*', fonts);
 }
 
 exports.default = series(
     deleteBuild,
-    parallel(html, styles, scripts, images),
+    parallel(html, styles, scripts, images, fonts),
     parallel(watch, server)
 );

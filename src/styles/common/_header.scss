@@ -1,4 +1,78 @@
-header{
-    height: 60px;
-    box-shadow: 0 0 10px 0 black;
+.header{
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
 }
+
+.header_wrapper{
+    margin: 0 auto;
+    width: 100%;
+    padding-top: 40px;
+    @include flexBox(space-between, baseline);
+    position: absolute;
+}
+
+.logo{
+    a{
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 24px;
+        color: $fc-white;
+        text-transform: uppercase;
+    }
+}
+
+.log_sign{
+    margin-right: 40px;
+    @include flexBox(space-between, baseline);
+    a{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+        color: $fc-white;
+        margin-left: 20px;
+        transition-property: color;
+        transition-duration: .3s;
+    }
+    .sign_up_btn{
+        display: block;
+        width: 90px;
+        height: 36px;
+        border: 2px solid $fc-white;
+        line-height: 32px;
+        text-align: center;
+        border-radius: 40px;
+        transition-property: background-color, border-color;
+        transition-duration: .3s;
+        &:hover{
+            background-color: $main_color;
+            border-color: $main_color;
+        }
+    }
+}
+
+.log_in a{
+    position: relative;
+    padding-bottom: 3px;
+}
+
+.log_in a{
+    &::after{
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 2px;
+        background-color: #fff;
+        transition: .3s all;
+        opacity: .9;
+    }
+    &:hover::after{
+        width: 100%;
+    }
+}
+

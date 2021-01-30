@@ -1,0 +1,77 @@
+// Footer Styles start
+
+.footer{
+    width: 100%;
+    border-top: 2px solid $main_color;
+    padding: 38px 0px 36px; 
+}
+
+.footer_wrapper{
+    @include flexBox(space-between);
+}
+
+.footer_left{
+    width: 544px;
+    @include flexBox(space-between);
+}
+
+.footer_logo{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    color: $main_color;
+    text-transform: uppercase;
+}
+
+.company{
+    a{
+        color: #999999;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 26px;
+        position: relative;
+        padding-bottom: 1px;
+        &::after{
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0%;
+            height: 1px;
+            background-color: #999;
+            transition: .3s all;
+        }
+        &:hover::after{
+            width: 100%;
+        }
+    }
+}
+
+.company_span, .partners_span{
+    display: block;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    color: $fc-dark;
+    margin-bottom: 11px;
+}
+
+.designed_by{
+    @include flexBox(flex-start, flex-end, column);
+    span{
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 10px;
+        line-height: 12px;
+        color: #CCCCCC;;
+        margin-bottom: 7px;
+    }
+}
+
+// Footer Styles end
